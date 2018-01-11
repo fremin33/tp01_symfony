@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ path('homepage') }}">
+</head>
+<body>
+<header>
+    <p id="burger" class="burger"></p>
+    <h1><a href="{{ path('homepage') }}">TP1 Symfony</a></h1>
+    <nav>
+        <ul>
+            <li><a href="{{ path('homepage') }}"> Accueil</a></li>
+            <li><a href="{{path('produits')}}"> Produits</a></li>
+            <li><a href="{{ path('histoire') }}"> Histoire</a></li>
+            <li><a href="{{ path('homepage', { '_fragment': 'contact' }) }}"> Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+{% block body %}{% endblock %}
+<footer>
+    <ul>
+        <li class="fa fa-twitter"></li>
+        <li class="fa fa-facebook"></li>
+        <li class="fa fa-google-plus"></li>
+        <li class="fa fa-pinterest"></li>
+        <li class="fa fa-foursquare"></li>
+        <li class="fa fa-yahoo"></li>
+        <li class="fa fa-yelp"></li>
+    </ul>
+    <p>Copyright The Boss</p>
+</footer>
+<script src="{{ asset('js/comp.js') }}"></script>
+</body>
+</html>

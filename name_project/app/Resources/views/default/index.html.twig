@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <body>
+
+<main>
+    <section>
+        <h3>Nos produits</h3>
+        <p>Voyez ce que nous pouvons faire</p>
+        <article>
+            <img src="{{ asset('images/laptop.png') }}" alt="Web design">
+            <h4>Web design</h4>
+            <p>His primis omittam intellegat cu, voluptua appetere mea ad, eu harum oporteat vix. Et vel quod legimus, graeci electram ocurreret at his. Vix at tation facete impetus omnesque ius harum antiopam.</p>
+            <p><a href="{{ path('produits' , {'num': 1}) }}">Learn more</a></p>
+        </article>
+
+        <article>
+            <img src="{{ asset('images/drawing.png') }}" alt="Graphic design">
+            <h4>Graphic design</h4>
+            <p>His primis omittam intellegat cu, voluptua appetere mea ad, eu harum oporteat vix. Et vel quod legimus, graeci electram ocurreret at his. Vix at tation facete impetus omnesque ius harum antiopam.</p>
+            <p><a href="{{ path('produits', {'num': 1}) }}">Learn more</a></p>
+        </article>
+        <article>
+            <img src="{{ asset('images/ipad.png') }}" alt="App design">
+            <h4>App design</h4>
+            <p>His primis omittam intellegat cu, voluptua appetere mea ad, eu harum oporteat vix. Et vel quod legimus, graeci electram ocurreret at his. Vix at tation facete impetus omnesque ius harum antiopam.</p>
+            <p><a href="{{ path('produits', {'num': 3}) }}">Learn more</a></p>
+        </article>
+    </section>
+</main>
+<aside>
+    <section class="team">
+        <h3>La Dream Team</h3>
+        <p>The best</p>
+        <article>
+            <img src="{{ asset('images/team1.png') }}" alt="">
+            <h4>Peter</h4>
+            <p class="fa fa-beer"> L'eau</p>
+        </article>
+        <article>
+            <img src="{{ asset('images/team2.png') }}" alt="">
+            <h4>Jack</h4>
+            <p class="fa fa-beer"> Jus d'orange</p>
+        </article>
+        <article>
+            <img src="{{ asset('images/team3.png') }}" alt="">
+            <h4>Mike</h4>
+            <p class="fa fa-beer"> Bière</p>
+        </article>
+    </section>
+    <section class="contact" id="contact">
+        <h3>Contact</h3>
+        <form>
+            <input type="text" name="nom" placeholder="Votre nom" required>
+            <input type="text" name="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message"></textarea>
+            <input type="submit" value="Envoyez">
+        </form>
+    </section>
+</aside>
+{% endblock %}
